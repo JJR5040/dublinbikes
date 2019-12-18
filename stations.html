@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.1">
+    <title>DublinBikes</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </head>
+  <body>
+      <header class="head_class">
+        <a href="home.html">
+            <img src="img/db_logo.png" alt="DublinBikes logo" class="logo">
+        </a>
+        <nav class="navbar navbar-expand-md navbar-light bg-light dbnavbar">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item"><a href="home.html" class="nav-link">Home</a></li>
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Stations<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item"><a href="join.html" class="nav-link">Join</a></li>
+              <li class="nav-item"><a href="news.html" class="nav-link">News</a></li>
+              <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
+            </ul>        
+            <form class="form-inline my-2 my-lg-0" role="search pages">
+              <input class="form-control mr-sm-2" id="search_for" type="search" placeholder="Search" aria-label="Search">
+              <script src="js/main_search_bar.js"></script>
+              <button class="btn btn-outline-dark my-2 my-sm-0" type="submit" onclick="searchFor()">Search</button>
+            </form>
+          </div>
+        </nav>
+      </header>
+    <br>
+    <section>
+      <div class="map">
+        <iframe
+          width="100%" 
+          height="450" 
+          src="https://www.google.com/maps/embed/v1/search?q=Dublinbikes%2C%20Dublin%2C%20Ireland&key=AIzaSyCP2aBaqBfyVtz5jWJE-ssNpgA9mx2um0Y" allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+    <section>
+      <hr>
+      <h2> List of Stations </h2>
+      <hr>
+      <div>
+        <span id="point"></span>
+        <span id="more">
+          <div style="background-color: #f8f8f8;border: 2px solid black;width:90%;margin-left:auto;margin-right:auto;">
+            <br>
+            <h6> Number of Stations: 115 </h6>
+            <h6>**Stations with credit card terminals</h6>
+            <br>
+            <Table style="width:80%;margin-left:auto;margin-right:auto;">
+              <tr>
+                <th>LIST OF CURRENT STATIONS:</th> 
+              </tr>
+              <tr>
+                <td>Avondale Road</td>
+                <td>Barrow Street**</td>
+                <td>Benson Street</td>
+                <td>Blackhall Place</td>
+              </tr>
+              <tr>
+                <td>Blessington Street**</td>
+                <td>Bolton Street </td>
+                <td>Brookfield Road</td>
+                <td>Buckingham Street Lower</td>
+              </tr>
+              <tr>
+                <td>Cathal Brugha Street</td>
+                <td>Charlemont Place</td>
+                <td>Charleville Road**</td>
+                <td>Clarendon Row</td>
+              </tr>
+              <tr>
+                <td>Christchurch Place</td> 
+                <td>City Quay</td>
+                <td>Clonmel Street</td>
+                <td>Collins Barracks Museum**</td>
+              </tr>
+              <tr>
+                <td>Convention Centre</td>
+                <td>Custom House** </td>
+                <td>Custom House Quay</td>
+                <td>Dame Street** </td>
+              </tr>
+              <tr>
+                <td>Denmark Street Great</td>
+                <td>Deverell Place</td>
+                <td>Earlsfort Terrace </td>
+                <td>Eccles Street </td>
+              </tr>
+              <tr>
+                <td>Eccles Street East </td>
+                <td>Emmet Road </td>
+                <td>Exchequer Street</td>
+                <td>Excise Walk</td>
+              </tr>
+              <tr>
+                <td>Fenian Street</td>
+                <td>Fitzwilliam Square East**</td>
+                <td>Fitzwilliam Square West </td>
+                <td>Francis Street**</td>
+              </tr>
+              <tr>
+                <td>Frederick Street South**</td>
+                <td>Fownes Street Upper </td>
+                <td>George’s Lane</td>
+                <td>George's Quay </td>
+              </tr>
+              <tr>
+                <td>Golden Lane </td>
+                <td>Grand Canal Dock </td>
+                <td>Grangegorman Lower (South)</td>
+                <td>Grangegorman Lower (Central)**</td>
+              </tr>
+              <tr>
+                <td>Grangegorman Lower (North)</td>
+                <td>Grantham Street** </td>
+                <td>Grattan Street</td>
+                <td>Greek Street </td>
+              </tr>
+              <tr>  
+                <td>Guild Street </td>
+                <td>Hanover Quay** </td>
+                <td>Harcourt Terrace </td>
+                <td>Hardwicke Place** </td>
+              </tr>
+              <tr>
+                <td>Hardwicke Street </td>
+                <td>Hatch Street </td>
+                <td>Herbert Place </td>
+                <td>Herbert Street</td>
+              </tr>
+              <tr>
+                <td>Heuston Bridge (North)</td>
+                <td>Heuston Station (Car Park)</td>
+                <td>Heuston Station (Central)</td>
+                <td>Heuston Bridge (South)</td>
+              </tr>
+              <tr>
+                <td>High Street** </td>
+                <td>James Street**</td>
+                <td>James Street East</td>
+                <td>Jervis Street**</td>
+              </tr>
+              <tr>
+                <td>John Street West</td>
+                <td>Kevin Street**</td>
+                <td>Kilmainham Gaol**</td>
+                <td>Kilmainham Lane</td>
+              </tr>
+              <tr>
+                <td>King Street North</td>
+                <td>Leinster Street South</td>
+                <td>Lime Street</td>
+                <td>Market Street South</td>
+              </tr>
+              <tr>
+                <td>Mater Hospital</td>
+                <td>Merrion Square East</td>
+                <td>Merrion Square South**</td>
+                <td>Merrion Square West**</td>
+              </tr>
+              <tr>
+                <td>Molesworth Street</td>
+                <td>Mount Brown</td>
+                <td>Mount Street Lower</td>
+                <td>Mountjoy Square East**</td>
+              </tr>
+              <tr>
+                <td>Mountjoy Square West</td>
+                <td>New Central Bank</td>
+                <td>Newman House</td>
+                <td>North Circular Road**</td>
+              </tr>
+              <tr>
+                <td>North Circular Road (O'Connell's)</td>
+                <td>Oliver Bond Street</td>
+                <td>Ormond Quay Upper**</td>
+                <td>Parkgate Street**</td>
+              </tr>
+              <tr>
+                <td>Parnell Street</td>
+                <td>Parnell Square North**</td>
+                <td>Pearse Street**</td>
+                <td>Phibsborough Road</td>
+              </tr>
+              <tr>
+                <td>Princes Street / O'Connell Street**</td>
+                <td>Portobello Road</td>
+                <td>Portobello Harbour</td>
+                <td>Rathdown Road </td>
+              </tr>
+              <tr>
+                <td>Rothe Abbey**</td>
+                <td>Royal Hospital**</td>
+                <td>Sandwith Street**</td>
+                <td>Sir Patrick Dun's**</td>
+              </tr>
+              <tr>
+                <td>South Dock Road</td>
+                <td>St. James Hospital (Central)</td>
+                <td>St. James Hospital (Luas)</td>
+                <td>St. Stephen's Green East**</td>
+              </tr>
+              <tr>
+                <td>St. Stephen's Green South**</td>
+                <td>Smithfield</td>
+                <td>Smithfiled North**</td>
+                <td>Strand Street Great**</td>
+              </tr>
+              <tr>
+                <td>Talbot Street</td>
+                <td>The Point**</td>
+                <td>Townsend Street</td>
+                <td>Upper Sherrard Street</td>
+              </tr>
+              <tr>
+                <td>Western Way</td>
+                <td>Wilton Terrace**</td>
+                <td>Wilton Terrace (Park)**</td>
+                <td>Wolfe Tone Street</td>
+              </tr>
+              <tr>
+                <td>York Street (East)</td>
+                <td>York Street (West) </td>
+              </tr>
+            </Table>
+            <br>
+          </div>
+        </span>
+      </div>
+      <br>
+      <div class="bt">
+        <button class="btn btn-outline-dark my-2 my-sm-0" onclick="myFunction()" id="btn">Show Stations</button>
+      </div>
+      <script src=js/show_stations.js></script>
+    </section>
+    <br>
+    <br>
+    <br>
+    <footer class="bg-light">
+        <div>
+            <nav>
+                <ul>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="https://www.facebook.com/dublinbikes/"><img class="icon" src="img/facebook.png" alt="Email icon"></a></li>
+                    <li><a href="https://twitter.com/dublinbikes2go"><img class="icon" src="img/twitter.png" alt="Email icon"></a></li>
+                    <li><a href="https://www.instagram.com/explore/tags/dublinbikes/"><img class="icon" src="img/instagram.png" alt="Email icon"></a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+  </body>
+</html>

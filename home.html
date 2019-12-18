@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DublinBikes</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header class="head_class">
+      <a href="home.html">
+        <img src="img/db_logo.png" alt="DublinBikes logo" class="logo">
+      </a>
+      <!---Header containing navbar styled with bootstrap-->
+      <nav class="navbar navbar-expand-md navbar-light bg-light dbnavbar" aria-labelledby="mainmenulabel>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item"><a href="stations.html" class="nav-link">Stations</a></li>
+            <li class="nav-item"><a href="join.html" class="nav-link">Join</a></li>
+            <li class="nav-item"><a href="news.html" class="nav-link">News</a></li>
+            <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0" role="search pages">
+            <input class="form-control mr-sm-2" id="search_for" type="search" placeholder="Search" aria-label="Search">
+            <script src="js/main_search_bar.js"></script>
+            <button class="btn btn-outline-dark my-2 my-sm-0" type="submit" onclick="searchFor()">Search</button>
+          </form>
+        </div>
+      </nav>
+    </header>
+    <section>
+      <hr>
+      <h1>Just Eat Dublin Bikes</h1>
+      <hr>
+    </section>
+    <section>
+      <div class="slideshow_container">
+        <img class="slideshow" name="slide"/>
+        <button tabindex="0" class="prev" onclick="plusSlides('True')">❮</button>
+        <button tabindex="0" class="next" onclick="plusSlides('False')">❯</button>
+        <noscript>Please enable your javascript</noscript>
+        <script src="js/slideshow.js"></script>
+      </div>
+    </section>
+    <br>
+    <br>
+    <section class="home_about">
+      <div class="container">
+        <div class="row justify-content-center my_row">
+          <div class="col-md-8 col-sm-12" style="background-color: #eef0eb;border: 2px solid black;">
+            <hr>
+            <h2>What is DublinBikes?</h2>
+            <hr>
+            <p>Just Eat dublinbikes stations are distributed throughout the
+              city centre to <strong>enable easy access and optimal use.</strong> Located
+              in close proximity to each other, every station has a minimum of 15 stands in
+              situ making it easy to enjoy the service.<span id="point">...</span><span id="more"><br><br>Just Eat dublinbikes is a
+              self-service bike rental system open to everyone from 14 years of age.
+              It enables you to travel through the city centre, commute between home and
+              work and get out and about to enjoy Dublin city at your leisure.</span>
+            </p>
+            <div class="bt">
+              <button class="btn btn-outline-dark my-2 my-sm-0" onclick="myFunction()" id="btn">Read more</button>
+            </div>
+            <script src=js/read_more.js></script>
+            <br>
+          </div>
+        </div>
+      </div>
+    </section>
+    <br>
+    <br>
+    <br>
+    <footer class="bg-light">
+      <div>
+        <nav>
+          <ul>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="https://www.facebook.com/dublinbikes/"><img class="icon" src="img/facebook.png" alt="Email icon"></a></li>
+            <li><a href="https://twitter.com/dublinbikes2go"><img class="icon" src="img/twitter.png" alt="Email icon"></a></li>
+            <li><a href="https://www.instagram.com/explore/tags/dublinbikes/"><img class="icon" src="img/instagram.png" alt="Email icon"></a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

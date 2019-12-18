@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DublinBikes</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<script defer src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!---Header containing navbar and log styled with bootstrap-->
+	<header class="head_class">
+    <a href="home.html">
+        <img src="img/db_logo.png" alt="DublinBikes logo" class="logo">
+    </a>
+    <nav class="navbar navbar-expand-md navbar-light bg-light dbnavbar">      
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item"><a href="home.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="stations.html" class="nav-link">Stations</a></li>
+          <li class="nav-item active">
+              <a class="nav-link" href="join.html">Join <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item"><a href="news.html" class="nav-link">News</a></li>
+          <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0" role="search pages">
+          <input class="form-control mr-sm-2" id="search_for" type="search" placeholder="Search" aria-label="Search">
+          <script src="js/main_search_bar.js"></script>
+          <button class="btn btn-outline-dark my-2 my-sm-0" type="submit" onclick="searchFor()">Search</button>
+        </form>
+      </div>
+    </nav>
+  </header>
+
+<h2>Pricing Structure</h2>
+
+<button class="faq">Service Charge</button>
+<div class="join_content">
+  <br>
+  <Table style="width:90;margin-left:auto;margin-right:auto;">
+    <tr>
+      <td>First 30 mins</td>
+      <td>Up to 1 hour</td>
+      <td>Up to 2 hour</td>
+      <td>Up to 3 hour</td>
+      <td>Up to 4 hour</td>
+      <td>Every Extra 30 mins</td>
+    </tr>
+    <tr>
+      <td>FREE</td>
+      <td>€0.50</td>
+      <td>€1.50</td>
+      <td>€3.50</td>
+      <td>€6.50</td>
+      <td>€2</td>
+    </tr>
+    <tr>
+  </Table>
+  <hr>
+</div>
+
+<button class="faq">3 Day Memembership Pricing</button>
+<div class="join_content">
+  <ul class="join_item">
+    <li>3 day memberships for Just Eat Dublin bikes can be purchased from any credit card 
+      terminal for just €5.</li>
+    <li>The first half-hour is free, you will be subject to charges after 
+      the first half-hour.</li>
+    <li>At the terminal you will receive a 3 day ticket of which you will need 
+      to keep for the duration of the subscription.</li>
+    <li>This membership card will contain an ID and PIN 
+      number which will needed to be entered when hiring a bike.</li>
+  </ul>
+</div>
+
+<button class="faq">Annual Subscription Pricing</button>
+<div class="join_content">
+  <ul class="join_item">
+    <li>Allready have a Leap Card? Then joining DiblinBikes is Free!</li>
+    <li>If you don't have Leap Card don't worry, you can still join and recieve a DublinBikes Cards for an annual fee of €25</li>
+    <li>Once you are in procession of your Leap or DublinBikes Card and you recieve your confirmation email you then avail of the service.</li>
+    <li>The Cards can be tapped at the terminal where you will enter your pin and ID and the bike will be unlocked.</li>
+  </ul>
+</div>
+
+<div style="background-color: white;">
+<br>
+<br>
+</div>
+<section>
+  <div class="form_container" style="background-color: #eef0eb;border: 2px solid black;">
+    <br>
+    <hr>
+    <h2>Annual Membership</h2>
+    </hr>
+    <hr>
+    <p>
+      The simple, easy and convenient way to enjoy Just Eat dublinbikes all year round. An Annual Card gives you easy access to the service at every station. You can also associate a Leap Card with the system, which can then be used instead of your Just Eat dublinbikes annual card.
+    </p>
+    </hr>
+    <form onsubmit="joined()" method="post">
+        Card Type:
+        <br>
+        <input type="radio" name="card" value="leap" checked> Leap Card
+        <input type="radio" name="card" value="dublinbikescard"> Dublin Bikes Card<br>
+        <br>
+        First Name:
+        <br>
+        <input id="form-input" type="text" name="name" placeholder="First Name" size="25" maxlength="50" required/><br>
+        Surname:
+        <br>
+        <input id="form-input" type="text" name="name" placeholder="Surname" size="25" maxlength="50" required/><br>
+        Date of Birth:
+        <br>
+        <input id="form-input" type="date" name="name" required/><br>
+        Address:
+        <br>
+        <input id="form-input" type="text" name="name" placeholder="Address" size="25" maxlength="75" required="" /><br>
+        Country:
+        <br>
+        <select style="background-color: white;" id="form-input" name="country">
+        <option value="Ireland">Ireland</option>
+        <option value="northern-ireland">Northern Ireland</option>
+        </select><br>
+        Eircode:
+        <br>
+        <input id="form-input" type="text" name="name" placeholder="Eircode" size="25" maxlength="7" /><br>
+        Email:
+        <br>
+        <input id="form-input" type="email" name="name" placeholder="Email" size="25" maxlength="50" required /><br>
+        Phone Number:
+        <br>
+        <input id="form-input" type=tel name="name" placeholder="Number" size="25" maxlength="50" required /><br>
+        <br>
+        <script src="js/join.js"></script>
+        <input class="btn btn-outline-dark my-2 my-sm-0" id="btn" onclick="joinup()" type="submit" name="submit" value="Join" />
+    </form>
+  </div>
+</section>
+<br>
+<br>
+<footer class="bg-light">
+    <div>
+        <nav>
+            <ul>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="https://www.facebook.com/dublinbikes/"><img class="icon" src="img/facebook.png" alt="Email icon"></a></li>
+                <li><a href="https://twitter.com/dublinbikes2go"><img class="icon" src="img/twitter.png" alt="Email icon"></a></li>
+                <li><a href="https://www.instagram.com/explore/tags/dublinbikes/"><img class="icon" src="img/instagram.png" alt="Email icon"></a></li>
+            </ul>
+        </nav>
+    </div>
+</footer>
+<script src="js/faq.js"></script>
+</body>
+</html>

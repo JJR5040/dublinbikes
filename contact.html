@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DublinBikes</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <!---Header containing navbar and log styled with bootstrap-->
+    <header class="head_class">
+      <a href="home.html">
+          <img src="img/db_logo.png" alt="DublinBikes logo" class="logo">
+      </a>
+      <nav class="navbar navbar-expand-md navbar-light bg-light dbnavbar">        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item"><a href="home.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="stations.html" class="nav-link">Stations</a></li>
+            <li class="nav-item"><a href="join.html" class="nav-link">Join</a></li>
+            <li class="nav-item"><a href="news.html" class="nav-link">News</a></li>
+            <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0" role="search pages">
+            <input class="form-control mr-sm-2" id="search_for" type="search" placeholder="Search" aria-label="Search">
+            <script src="js/main_search_bar.js"></script>
+            <button class="btn btn-outline-dark my-2 my-sm-0" type="submit" onclick="searchFor()">Search</button>
+          </form>
+        </div>
+      </nav>
+    </header>
+    <section>
+      <hr>
+      <h1> Contact Us </h1>
+      <hr>
+      <div class="form_container" onsubmit="emailsent()" style="background-color: #eef0eb;border: 2px solid black;">
+        <form method="post">
+          Name:
+          <br>
+          <input id="form-input" type="text" name="name" value="" required/><br>
+          <br>
+          Email Address:
+          <br>
+          <input id="form-input" type="email" name="name" value="" required/> <br>
+          <br>
+          Telephone:
+          <br>
+          <input id="form-input" type="text" name="name" value="" required/><br>
+          <br>
+          Query:
+          <br>
+          <input id="form-input" style="height: 100px;resize: vertical;" type="text" name="name" value="" required/><br>
+          <br>
+          <input class="btn btn-outline-dark my-2 my-sm-0" onclick="contactus()" id="btn" type="submit" name="submit" value="Submit" />
+        </form>
+        <script src="js/contact.js"></script>        
+      </div>
+    </section>
+    <br>
+    <br>
+    <section>
+      <div class="form_container" style="background-color: #eef0eb;border: 2px solid black;">
+        <hr>
+        <h2>Telephone</h2> 
+        <hr>
+        <p align="center">For telephone queries please contact :<br>1850 777 070 or 01 424 7605 </p><br>
+      </div>
+    </section>
+    <div style="background-color: white;">
+    <br>
+    <br>
+    </div>
+    <section>
+      <div class="form_container" style="background-color: #eef0eb;border: 2px solid black;">
+        <hr>
+        <h2> Email </h2>
+        <hr>
+        <p align="center">contactus@dublinbikes.ie</p>
+      </div>
+    </section>
+    <br>
+    <br>
+    <br>
+    <footer class="bg-light">
+      <div>
+        <nav>
+          <ul>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="https://www.facebook.com/dublinbikes/"><img class="icon" src="img/facebook.png" alt="Email icon"></a></li>
+            <li><a href="https://twitter.com/dublinbikes2go"><img class="icon" src="img/twitter.png" alt="Email icon"></a></li>
+            <li><a href="https://www.instagram.com/explore/tags/dublinbikes/"><img class="icon" src="img/instagram.png" alt="Email icon"></a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>
